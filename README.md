@@ -6,7 +6,7 @@ For age: Youth=1,Middle=2,Senior=3 For income: Low=1,Medium=2,High=3 For student
 For credit rating: Fair=1,Excellent=2 For buys computer: Yes=1,No=2
 DATASET:
 age	income	student	credit_rating buys_computer
-1	3	2	1	           2
+1  	3      	2     	1	            2
 1	3	2	2	           2
 2	3	2	1	           1
 3	2	2	1	           1
@@ -54,9 +54,9 @@ Returns:
 splitting : list, length=2 * len(arrays)
 List containing train-test split of inputs.
 
+Print X_train,y_train,X_test and y_test
 
-
-
+2. svm.SVC
 
 Support Vector Classification.
 The implementation is based on libsvm. The fit time complexity is more than quadratic with the number of samples which makes it hard to scale to dataset with more than a couple of 10000 samples.
@@ -92,6 +92,8 @@ decision_function_shape is ‘ovr’ by default.
 random_state : int, RandomState instance or None, optional (default=None)
 The seed of the pseudo random number generator to use when shuffling the data. If int, random_state is the seed used by the random number generator; If RandomState instance, random_state is the random number generator; If None, the random number generator is the RandomState instance used by np.random.
 
+3. fit
+   Fits 
 
 5.predict(X)
 Perform classification on samples in X.
