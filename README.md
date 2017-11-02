@@ -93,7 +93,56 @@ random_state : int, RandomState instance or None, optional (default=None)
 The seed of the pseudo random number generator to use when shuffling the data. If int, random_state is the seed used by the random number generator; If RandomState instance, random_state is the random number generator; If None, the random number generator is the RandomState instance used by np.random.
 
 3. fit
-   Fits 
+   Fits the SVM model according to the given training data.
+   Parameters:	
+X : array-like, dtype=float64, size=[n_samples, n_features]
+Y : array, dtype=float64, size=[n_samples]
+target vector
+svm_type : {0, 1, 2, 3, 4}, optional
+Type of SVM: C_SVC, NuSVC, OneClassSVM, EpsilonSVR or NuSVR respectively. 0 by default.
+kernel : {‘linear’, ‘rbf’, ‘poly’, ‘sigmoid’, ‘precomputed’}, optional
+Kernel to use in the model: linear, polynomial, RBF, sigmoid or precomputed. ‘rbf’ by default.
+degree : int32, optional
+Degree of the polynomial kernel (only relevant if kernel is set to polynomial), 3 by default.
+gamma : float64, optional
+Gamma parameter in rbf, poly and sigmoid kernels. Ignored by other kernels. 0.1 by default.
+coef0 : float64, optional
+Independent parameter in poly/sigmoid kernel. 0 by default.
+tol : float64, optional
+Numeric stopping criterion (WRITEME). 1e-3 by default.
+C : float64, optional
+C parameter in C-Support Vector Classification. 1 by default.
+nu : float64, optional
+0.5 by default.
+epsilon : double, optional
+0.1 by default.
+class_weight : array, dtype float64, shape (n_classes,), optional
+np.empty(0) by default.
+sample_weight : array, dtype float64, shape (n_samples,), optional
+np.empty(0) by default.
+shrinking : int, optional
+1 by default.
+probability : int, optional
+0 by default.
+cache_size : float64, optional
+Cache size for gram matrix columns (in megabytes). 100 by default.
+max_iter : int (-1 for no limit), optional.
+Stop solver after this many iterations regardless of accuracy. -1 by default.
+random_seed : int, optional
+Seed for the random number generator used for probability estimates. 0 by default.
+Returns:	
+support : array, shape=[n_support]
+index of support vectors
+support_vectors : array, shape=[n_support, n_features]
+support vectors (equivalent to X[support]). Will return an empty array in the case of precomputed kernel.
+n_class_SV : array
+number of support vectors in each class.
+sv_coef : array
+coefficients of support vectors in decision function.
+intercept : array
+intercept in decision function
+probA, probB : array
+probability estimates, empty array for probability=False
 
 5.predict(X)
 Perform classification on samples in X.
