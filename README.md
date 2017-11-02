@@ -4,41 +4,53 @@ The repository contains the python code to implement Support Vector Machine algo
 The input file mydata.txt contains the dataset as follows:
 For age: Youth=1,Middle=2,Senior=3 For income: Low=1,Medium=2,High=3 For student: Yes=1,No=2
 For credit rating: Fair=1,Excellent=2 For buys computer: Yes=1,No=2
-After classification the model would predict whether a person buys a computer based upon attributes age,income,student and credit rating.
-DATASET:
-age	income	student	credit_rating buys_computer
-1  	3      	2     	1	            2
-1	   3      	2	      2	            2
-2	   3	      2	      1	            1
-3	   2	      2     	1	            1
-3	   1	      1	      1	            1
-3	   1     	1     	2	            2
-2	   1	      1     	2	            1
-1	   2	      2     	1	            2
-1	   1	      1	      1	            1
-3	   2	      1	      1	            1
-1	   2	      1      	2	            1
-2    	2	      2	      2	            1
-2	   3	      1	      1	            1
-3	   2	      2	      2	            2
 
+After classification the model would predict whether a person buys a computer based upon attributes age,income,student and credit rating.
+
+DATASET:
+
+age   	income	   student	   credit_rating   buys_computer
+1  	   3      	   2     	   1	             2
+1	      3         	2	         2	             2
+2	      3	         2	         1	             1
+3	      2	         2        	1	             1
+3	      1	         1	         1	             1
+3	      1     	   1         	2	             2 
+2	      1	         1     	   2	             1
+1	      2	         2     	   1	             2
+1	      1	         1	         1	             1
+3	      2	         1	         1	             1
+1	      2	         1      	   2	             1
+2      	2	         2	         2	             1
+2	      3	         1	         1	             1
+3	      2	         2	         2	             2
+ 
 First we import the required libraries:
+
 1.pandas:This is used to read the dataset from the file.
+
 2.train_test_split from sklearn.model_selection: Both the training and testing dataset is taken from the input file,so it needs to be                                                    split into two parts training dataset and testing dataset.This is the purpose of                                                        train_test_split which splits the dataset into training and testing datasets in the                                                      ratio 3:1(approx).
+
 3.svm from sklearn: To implement Support Vector Classsification(SVC).
 
 Read the data in variable comps.
+
 Print the original dataset.
+
 Store the attributes/features in tuple X.
+
 Store the class label in y.
+
 Print X,print y.
 
 Use the functions:
+
 1.train_test_split(*arrays, ** options)
 Split arrays or matrices into random train and test subsets
 Quick utility that wraps input validation and next(ShuffleSplit().split(X, y)) and application to input data into a single call for splitting (and optionally subsampling) data in a oneliner.
 
 Parameters:	
+
 *arrays : sequence of indexables with same length / shape[0]
 Allowed inputs are lists, numpy arrays, scipy-sparse matrices or pandas dataframes.
 test_size : float, int, None, optional
@@ -93,7 +105,8 @@ decision_function_shape is ‘ovr’ by default.
 random_state : int, RandomState instance or None, optional (default=None)
 The seed of the pseudo random number generator to use when shuffling the data. If int, random_state is the seed used by the random number generator; If RandomState instance, random_state is the random number generator; If None, the random number generator is the RandomState instance used by np.random.
 
-3. fit
+3. fit:
+
    Fits the SVM model according to the given training data.
    Parameters:	
 X : array-like, dtype=float64, size=[n_samples, n_features]
