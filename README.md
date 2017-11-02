@@ -26,6 +26,15 @@ First we import the required libraries:
 2.train_test_split from sklearn.model_selection: Both the training and testing dataset is taken from the input file,so it needs to be                                                    split into two parts training dataset and testing dataset.This is the purpose of                                                        train_test_split which splits the dataset into training and testing datasets in the                                                      ratio 3:1(approx).
 3.svm from sklearn: To implement Support Vector Classsification(SVC).
 
+Read the data in variable comps.
+Print the original dataset.
+Store the attributes/features in tuple X.
+Store the class label in y.
+Print X,print y.
+
+Use the functions:
+1.train_test_split
+
 
 
 
