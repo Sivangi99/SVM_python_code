@@ -144,6 +144,20 @@ intercept in decision function
 probA, probB : array
 probability estimates, empty array for probability=False
 
+4.score(X, y, sample_weight=None)
+Returns the mean accuracy on the given test data and labels.
+In multi-label classification, this is the subset accuracy which is a harsh metric since you require for each sample that each label set be correctly predicted.
+Parameters:	
+X : array-like, shape = (n_samples, n_features)
+Test samples.
+y : array-like, shape = (n_samples) or (n_samples, n_outputs)
+True labels for X.
+sample_weight : array-like, shape = [n_samples], optional
+Sample weights.
+Returns:	
+score : float
+Mean accuracy of self.predict(X) wrt. y.
+
 5.predict(X)
 Perform classification on samples in X.
 For an one-class model, +1 or -1 is returned.
@@ -153,3 +167,5 @@ For kernel=”precomputed”, the expected shape of X is [n_samples_test, n_samp
 Returns:	
 y_pred : array, shape (n_samples,)
 Class labels for samples in X.
+
+ Used different kernels,i.e.,kernel='linear',kernel='poly' and kernel='rbf' and tested the accuracy in each case, found that the accuracy for kernel='linear' and kernel='poly' was 0.5 and for kernel='rbf' it was 0.75.
