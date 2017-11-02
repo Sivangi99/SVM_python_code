@@ -21,6 +21,10 @@ age	income	student	credit_rating buys_computer
 2	3	1	1	           1
 3	2	2	2	           2
 
+First we import the required libraries:
+1.pandas:This is used to read the dataset from the file.
+2.train_test_split from sklearn.model_selection: Both the training and testing dataset is taken from the input file,so it needs to be                                                    split into two parts training dataset and testing dataset.This is the purpose of                                                        train_test_split which splits the dataset into training and testing datasets in the                                                      ratio 3:1(approx).
+3.svm from sklearn: To implement Support Vector Classsification(SVC).
 
 
 
